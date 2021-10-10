@@ -28,7 +28,6 @@ public class ProfileActivity extends AppCompatActivity {
         nextBtn2.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nextBtn2.setBackgroundColor(Color.rgb(79, 39, 96));
                 Intent i = new Intent(ProfileActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();

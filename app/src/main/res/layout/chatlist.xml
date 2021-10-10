@@ -6,17 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="@drawable/chat_bg"
-    android:weightSum="12">
+    android:background="@drawable/lightbg"
+    android:weightSum="10">
+
+    <!-- 뒤로가기 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="10"
+        android:background="@color/black">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="25dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+            <Button
+                android:id="@+id/backtomain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/leftarrow">
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="37dp"
+                android:background="#4Dffffff"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:text="채팅 리스트"
+            android:textSize="23dp"
+            android:fontFamily="@font/elicedigitalnaeumbold"
+            android:textColor="@color/white">
+        </TextView>
+    </LinearLayout>
 
     <!-- 친구요청 및 랜덤매칭 버튼 2개 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_weight="2.5"
+        android:orientation="horizontal">
         <Button
+            android:id="@+id/randBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -24,39 +70,51 @@
             android:layout_margin="10dp">
         </Button>
         <Button
+            android:id="@+id/requestBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/chat_requestlist"
             android:layout_margin="10dp">
         </Button>
-
     </LinearLayout>
 
     <!-- 메인 -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7">
+        android:layout_weight="6.5">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <LinearLayout
+
+            <!-- 위 구분선 및 사용자-->
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:id="@+id/chatlist1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="10">
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:src="@drawable/icon_travel">
+                    android:layout_weight="2.5"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_fashion">
                 </ImageView>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="4"
+                    android:layout_weight="5.5"
                     android:orientation="vertical"
                     android:weightSum="10">
                     <TextView
@@ -64,38 +122,54 @@
                         android:layout_height="0dp"
                         android:layout_weight="4"
                         android:gravity="left|bottom"
-                        android:text="user 1">
+                        android:text="나이키만세"
+                        android:fontFamily="@font/elicedigitalnaeumbold">
                     </TextView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="6"
-                        android:text="안녕하세요">
+                        android:paddingTop="5dp"
+                        android:text="나중에 시간되시면 같이 가욤~~"
+                        android:fontFamily="@font/elicedigitalbaeumregular">
                     </TextView>
                 </LinearLayout>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="시간"
+                    android:text="10:39AM"
+                    android:fontFamily="@font/elicedigitalnaeumbold"
                     android:layout_gravity="right"
-                    android:layout_weight="3">
+                    android:layout_weight="2"
+                    android:paddingTop="10dp">
                 </TextView>
             </LinearLayout>
+
+            <!-- 위 구분선 및 사용자-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="10">
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="2.5"
+                    android:padding="10dp"
                     android:src="@drawable/icon_travel">
                 </ImageView>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="4"
+                    android:layout_weight="5.5"
                     android:orientation="vertical"
                     android:weightSum="10">
                     <TextView
@@ -103,13 +177,16 @@
                         android:layout_height="0dp"
                         android:layout_weight="4"
                         android:gravity="left|bottom"
-                        android:text="user 1">
+                        android:text="user 1"
+                        android:fontFamily="@font/elicedigitalnaeumbold">
                     </TextView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="6"
-                        android:text="안녕하세요">
+                        android:paddingTop="5dp"
+                        android:text="채팅 내용"
+                        android:fontFamily="@font/elicedigitalbaeumregular">
                     </TextView>
                 </LinearLayout>
                 <TextView
@@ -117,13 +194,180 @@
                     android:layout_height="match_parent"
                     android:text="시간"
                     android:layout_gravity="right"
-                    android:layout_weight="3">
+                    android:layout_weight="2"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/elicedigitalnaeumbold">
+                </TextView>
+            </LinearLayout>
+
+            <!-- 위 구분선 및 사용자-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_food">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.5"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="left|bottom"
+                        android:text="user 2"
+                        android:fontFamily="@font/elicedigitalnaeumbold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6"
+                        android:paddingTop="5dp"
+                        android:text="채팅 내용"
+                        android:fontFamily="@font/elicedigitalbaeumregular">
+                    </TextView>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="시간"
+                    android:layout_gravity="right"
+                    android:layout_weight="2"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/elicedigitalnaeumbold">
+                </TextView>
+            </LinearLayout>
+
+            <!-- 위 구분선 및 사용자-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_makeup">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.5"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="left|bottom"
+                        android:text="user 3"
+                        android:fontFamily="@font/elicedigitalnaeumbold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6"
+                        android:paddingTop="5dp"
+                        android:text="채팅 내용"
+                        android:fontFamily="@font/elicedigitalbaeumregular">
+                    </TextView>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="시간"
+                    android:layout_gravity="right"
+                    android:layout_weight="2"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/elicedigitalnaeumbold">
+                </TextView>
+            </LinearLayout>
+
+            <!-- 위 구분선 및 사용자-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_travel">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.5"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="left|bottom"
+                        android:text="user 4"
+                        android:fontFamily="@font/elicedigitalnaeumbold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6"
+                        android:paddingTop="5dp"
+                        android:text="채팅 내용"
+                        android:fontFamily="@font/elicedigitalbaeumregular">
+                    </TextView>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="시간"
+                    android:layout_gravity="right"
+                    android:layout_weight="2"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/elicedigitalnaeumbold">
                 </TextView>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-    <!-- 네비바 -->
+    <!-- 네비바
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -172,4 +416,5 @@
             </Button>
         </LinearLayout>
     </LinearLayout>
+    -->
 </LinearLayout>

@@ -10,7 +10,7 @@
         android:layout_weight="3"
         android:background="@drawable/startbg">
         <TextView
-            android:paddingRight="20dp"
+            android:paddingRight="25dp"
             android:paddingBottom="5dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -18,6 +18,8 @@
             android:textSize="35dp"
             android:gravity="right"
             android:textStyle="bold|italic"
+            android:fontFamily="@font/elicedigitalnaeumbold"
+            android:textColor="@color/white"
             android:layout_gravity="bottom">
         </TextView>
     </LinearLayout>
@@ -41,6 +43,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="8"
                 android:text="Google 계정으로 로그인"
+                android:fontFamily="@font/elicedigitalnaeumbold"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 android:textStyle="bold"
@@ -62,6 +65,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="8"
                 android:text="Naver 계정으로 로그인"
+                android:fontFamily="@font/elicedigitalnaeumbold"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 android:textStyle="bold"
@@ -83,6 +87,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="8"
                 android:text="kakao 계정으로 로그인"
+                android:fontFamily="@font/elicedigitalnaeumbold"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 android:textStyle="bold"

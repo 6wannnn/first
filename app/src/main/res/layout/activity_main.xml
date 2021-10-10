@@ -44,8 +44,8 @@
                 android:layout_weight="1"
                 android:text="모모"
                 android:textSize="25dp"
-                android:textStyle="bold"
-                android:gravity="right"
+                android:fontFamily="@font/elicedigitalnaeumbold"
+                android:gravity="right|center"
                 android:textColor="@color/white">
             </TextView>
             <TextView
@@ -54,8 +54,8 @@
                 android:layout_weight="1"
                 android:text=" 님"
                 android:textSize="25dp"
-                android:textStyle="bold"
-                android:gravity="left"
+                android:fontFamily="@font/elicedigitalnaeumbold"
+                android:gravity="left|center"
                 android:textColor="@color/white">
             </TextView>
         </LinearLayout>

@@ -17,12 +17,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setIcon(R.drawable.actionbarlogo);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("모두 모여라");
 
         tousedtrade = (Button)findViewById(R.id.tousedtrade);
         tousedtrade.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tousedtrade.setBackgroundColor(Color.rgb(79, 39, 96));
                 Intent a = new Intent(MainActivity.this, UsedtradeActivity.class);
                 startActivity(a);
                 finish();
@@ -32,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         tomain.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tomain.setBackgroundColor(Color.rgb(79, 39, 96));
                 Intent b = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(b);
                 finish();
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         tochat.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tochat.setBackgroundColor(Color.rgb(79, 39, 96));
                 Intent c = new Intent(MainActivity.this, ChatlistActivity.class);
                 startActivity(c);
                 finish();
