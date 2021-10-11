@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <!--android:theme="@style/Theme.First"-->
         <activity android:name=".ActivityStartapp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
