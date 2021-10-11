@@ -7,12 +7,24 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+
 public class LoginActivity extends AppCompatActivity {
     Button googleloginBtn, naverloginBtn, kakaologinBtn;
+    private Object GoogleSignInClient;
+    private Object FirebaseAuth;
+    private GoogleApiClient GoogleSignIn;
+    private Object Int;
+    private boolean GoogleSignInAccount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +33,13 @@ public class LoginActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+
         //버튼마다 클릭리스너 걸었음 -> 인텐트 다른 엑티비티로 이동필요(로그인 API연동)
-        googleloginBtn = (Button) findViewById(R.id.googleloginBtn);
+       googleloginBtn = (Button) findViewById(R.id.googleloginBtn);
         googleloginBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+
         naverloginBtn = (Button) findViewById(R.id.naverloginBtn);
         naverloginBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -53,4 +71,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 }
