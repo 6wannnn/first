@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 naverloginBtn.setBackgroundColor(Color.rgb(79, 39, 96));
-                Intent b = new Intent(LoginActivity.this, MainActivity.class);
+                Intent b = new Intent(LoginActivity.this, InterestActivity.class);
                 startActivity(b);
                 finish();
             }
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 naverloginBtn.setBackgroundColor(Color.rgb(79, 39, 96));
-                Intent c = new Intent(LoginActivity.this, MainActivity.class);
+                Intent c = new Intent(LoginActivity.this, InterestActivity.class);
                 startActivity(c);
                 finish();
             }

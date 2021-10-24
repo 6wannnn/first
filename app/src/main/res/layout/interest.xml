@@ -229,7 +229,7 @@
                 android:layout_weight="1"
                 android:text="&lt;"
                 android:textSize="20dp"
-                android:fontFamily="@font/elicedigitalbaeumregular"/>
+                android:fontFamily="@font/elicedigitalnaeumbold"/>
             <Button
                 android:id="@+id/interest_1Btn"
                 android:layout_width="0dp"
@@ -269,7 +269,7 @@
                 android:layout_weight="1"
                 android:text=" &gt;"
                 android:textSize="20dp"
-                android:fontFamily="@font/elicedigitalbaeumregular"/>
+                android:fontFamily="@font/elicedigitalnaeumbold"/>
         </LinearLayout>
 
     </LinearLayout>
